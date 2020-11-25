@@ -23,7 +23,7 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void FormStudents_Load(object sender, EventArgs e)
+        private void FormStudents1_Load(object sender, EventArgs e)
         {
             GetAllStudents();
         }
