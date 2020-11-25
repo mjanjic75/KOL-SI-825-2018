@@ -18,7 +18,7 @@ namespace DataLayer
 
                 SqlCommand dataCommand = new SqlCommand();
                 dataCommand.Connection = dataConnection;
-                dataCommand.CommandText = "SELECT * FROM Students";
+                dataCommand.CommandText = "SELECT * FROM Student";
 
                 SqlDataReader dataReader = dataCommand.ExecuteReader();
 
