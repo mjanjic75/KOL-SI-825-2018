@@ -39,6 +39,7 @@
             this.labelMessages = new System.Windows.Forms.Label();
             this.labelAverageMark = new System.Windows.Forms.Label();
             this.textBoxStudentFilterByAverageMark = new System.Windows.Forms.TextBox();
+            this.buttonStudentRefreshListBox = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxStudents
@@ -100,7 +101,7 @@
             // buttonInsertStudent
             // 
             this.buttonInsertStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertStudent.Location = new System.Drawing.Point(238, 439);
+            this.buttonInsertStudent.Location = new System.Drawing.Point(59, 450);
             this.buttonInsertStudent.Name = "buttonInsertStudent";
             this.buttonInsertStudent.Size = new System.Drawing.Size(446, 61);
             this.buttonInsertStudent.TabIndex = 7;
@@ -119,7 +120,7 @@
             // labelAverageMark
             // 
             this.labelAverageMark.AutoSize = true;
-            this.labelAverageMark.Location = new System.Drawing.Point(29, 471);
+            this.labelAverageMark.Location = new System.Drawing.Point(578, 450);
             this.labelAverageMark.Name = "labelAverageMark";
             this.labelAverageMark.Size = new System.Drawing.Size(88, 13);
             this.labelAverageMark.TabIndex = 9;
@@ -127,16 +128,27 @@
             // 
             // textBoxStudentFilterByAverageMark
             // 
-            this.textBoxStudentFilterByAverageMark.Location = new System.Drawing.Point(123, 468);
+            this.textBoxStudentFilterByAverageMark.Location = new System.Drawing.Point(672, 447);
             this.textBoxStudentFilterByAverageMark.Name = "textBoxStudentFilterByAverageMark";
             this.textBoxStudentFilterByAverageMark.Size = new System.Drawing.Size(68, 20);
             this.textBoxStudentFilterByAverageMark.TabIndex = 10;
+            // 
+            // buttonStudentRefreshListBox
+            // 
+            this.buttonStudentRefreshListBox.Location = new System.Drawing.Point(581, 487);
+            this.buttonStudentRefreshListBox.Name = "buttonStudentRefreshListBox";
+            this.buttonStudentRefreshListBox.Size = new System.Drawing.Size(159, 23);
+            this.buttonStudentRefreshListBox.TabIndex = 11;
+            this.buttonStudentRefreshListBox.Text = "Refresh Student List";
+            this.buttonStudentRefreshListBox.UseVisualStyleBackColor = true;
+            this.buttonStudentRefreshListBox.Click += new System.EventHandler(this.buttonStudentRefreshListBox_Click);
             // 
             // FormStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 539);
+            this.ClientSize = new System.Drawing.Size(966, 539);
+            this.Controls.Add(this.buttonStudentRefreshListBox);
             this.Controls.Add(this.textBoxStudentFilterByAverageMark);
             this.Controls.Add(this.labelAverageMark);
             this.Controls.Add(this.labelMessages);
@@ -169,6 +181,7 @@
         private System.Windows.Forms.Label labelMessages;
         private System.Windows.Forms.Label labelAverageMark;
         private System.Windows.Forms.TextBox textBoxStudentFilterByAverageMark;
+        private System.Windows.Forms.Button buttonStudentRefreshListBox;
     }
 }
 
