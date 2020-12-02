@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PresentationLayerWeb
-{
-
-
-    public partial class WebForm1
-    {
-
+namespace PresentationLayerWeb {
+    
+    
+    public partial class WebFormStudents {
+        
         /// <summary>
         /// ListBoxStudent control.
         /// </summary>
@@ -22,5 +20,104 @@ namespace PresentationLayerWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox ListBoxStudent;
+        
+        /// <summary>
+        /// LabelStudentFilterByAverageMark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelStudentFilterByAverageMark;
+        
+        /// <summary>
+        /// TextBoxStudentFilterByAverageMark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxStudentFilterByAverageMark;
+        
+        /// <summary>
+        /// ButtonStudentRefreshListBoxStudent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonStudentRefreshListBoxStudent;
+        
+        /// <summary>
+        /// LabelMessages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMessages;
+        
+        /// <summary>
+        /// LabelStudentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelStudentName;
+        
+        /// <summary>
+        /// TextBoxStudentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxStudentName;
+        
+        /// <summary>
+        /// LabelStudentIndexNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelStudentIndexNumber;
+        
+        /// <summary>
+        /// TextBoxStudentIndexNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxStudentIndexNumber;
+        
+        /// <summary>
+        /// LabelStudentAverageMark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelStudentAverageMark;
+        
+        /// <summary>
+        /// TextBoxStudentAverageMark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxStudentAverageMark;
+        
+        /// <summary>
+        /// ButtonStudentInsert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonStudentInsert;
     }
 }
