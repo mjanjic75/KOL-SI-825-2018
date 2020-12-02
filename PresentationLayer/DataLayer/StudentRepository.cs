@@ -18,7 +18,7 @@ namespace DataLayer
 
                 SqlCommand dataCommand = new SqlCommand();
                 dataCommand.Connection = dataConnection;
-                dataCommand.CommandText = "SELECT * FROM Student";
+                dataCommand.CommandText = "SELECT * FROM Students";
 
                 SqlDataReader dataReader = dataCommand.ExecuteReader();
 
@@ -48,7 +48,7 @@ namespace DataLayer
                 SqlCommand dataCommand = new SqlCommand();
                 dataCommand.Connection = dataConnection;
 
-                dataCommand.CommandText = string.Format("INSERT INTO Student VALUES('{0}','{1}',{2})",
+                dataCommand.CommandText = string.Format("INSERT INTO Students VALUES('{0}','{1}',{2})",
                     s.Name, s.IndexNumber, s.AverageMark);
 
                 return dataCommand.ExecuteNonQuery();
