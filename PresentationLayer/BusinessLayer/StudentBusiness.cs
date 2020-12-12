@@ -1,53 +1,24 @@
 ﻿using DataLayer;
-using DataLayer.Models;
+using Shared.Interfaces.Business;
+using Shared.Interfaces.Repository;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
-{
-    public class StudentBusiness
-    {
-        StudentRepository studentRepository = new StudentRepository();
+namespace BusinessLayer {
+	public class StudentBusiness : IStudentBusiness {
+		private readonly IStudentRepository studentRepository;
 
-        public List<Student> GetAllStudents()
-        {
-            return this.studentRepository.GetAllStudents();
-        }
+		public StudentBusiness(IStudentRepository student_repository) => studentRepository = student_repository;
 
-        public List<Student> GetStudentsWithAverageLargerThan(decimal d)
-        {
-            return this.studentRepository.GetAllStudents().
-                Where(s => s.AverageMark > d).ToList();
+		public List<Student> GetAllStudents() => studentRepository.GetAllStudents();
 
-            //List<Student> allStudents = this.studentRepository.GetAllStudents();
+		public List<Student> GetStudentsWithAverageLargerThan(decimal d) => studentRepository.GetAllStudents().
+				Where(s => s.AverageMark > d).ToList();
 
-            //List<Student> StudensWithAverageMark = new List<Student>();
-
-            //foreach(Student s in allStudents)
-            //{
-            //    if (s.AverageMark > d)
-            //    {
-            //        StudensWithAverageMark.Add(s);
-            //    }
-            //}
-            //return StudensWithAverageMark;
-        }
-
-        public string InsertStudent(Student s)
-        {
-            int rowAffected = this.studentRepository.InsertStudent(s);
-
-            if (rowAffected > 0)
-            {
-                return "Uspešan unos u bazu podataka!";
-            }
-            else
-            {
-                return "Neuspešan unos, došlo je do greške!";
-            }
-        }
-    }
+		public string InsertStudent(Student s) => studentRepository.InsertStudent(s) > 0 ? "Uspešan unos u bazu podataka!" : "Neuspešan unos, došlo je do greške!";
+	}
 }
