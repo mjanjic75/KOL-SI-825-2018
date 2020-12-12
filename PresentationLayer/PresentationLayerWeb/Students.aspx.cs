@@ -1,6 +1,9 @@
 ﻿using Shared.Interfaces.Business;
 using Shared.Models;
 using System;
+using System.Drawing;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace PresentationLayerWeb {
 	public partial class WebFormStudents : System.Web.UI.Page {
@@ -11,8 +14,6 @@ namespace PresentationLayerWeb {
 		public WebFormStudents(IStudentBusiness student_business) {
 			studentBusiness = student_business;
 		}
-
-		// vrednost prema kojoj će se prikazivati studenti sa prosečnom ocenom većom od "d"
 
 		protected void Page_Load(object sender, EventArgs e) {
 			GetAllStudents();
@@ -45,6 +46,14 @@ namespace PresentationLayerWeb {
 		}
 
 		protected void ButtonStudentInsert_Click(object sender, EventArgs e) {
+			if (string.IsNullOrEmpty(TextBoxStudentName.Text) ||
+				string.IsNullOrEmpty(TextBoxStudentIndexNumber.Text) ||
+				string.IsNullOrEmpty(TextBoxStudentEmail.Text) ||
+				string.IsNullOrEmpty(TextBoxStudentAverageMark.Text)) {
+				ScriptManager.RegisterClientScriptBlock(this, GetType(), "alertMessage", "alert('Sva polja su obavezna!')", true);
+				return;
+			}
+
 			Student s = new Student {
 				Name = TextBoxStudentName.Text,
 				IndexNumber = TextBoxStudentIndexNumber.Text,
@@ -54,8 +63,17 @@ namespace PresentationLayerWeb {
 			LabelMessages.Text = studentBusiness.InsertStudent(s);
 
 			GetAllStudents();
+
+			ClearInputs();
 		}
 
+
+		void ClearInputs() {
+			TextBoxStudentName.Text = string.Empty;
+			TextBoxStudentIndexNumber.Text = string.Empty;
+			TextBoxStudentEmail.Text = string.Empty;
+			TextBoxStudentAverageMark.Text = string.Empty;
+		}
 
 		// Pošto je pri učitavanju forme polje za prosečnu ocenu prazno,
 		// kreiramo posebnu metodu koja se poziva klikom na odgovarajući taster, 
